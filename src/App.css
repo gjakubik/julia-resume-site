@@ -23,6 +23,7 @@
 /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
+  padding-top: 40%;
   left: 20%;
   color: rgb(0, 255, 221);
 }
