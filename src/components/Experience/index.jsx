@@ -9,16 +9,17 @@ import { colors, expList } from '../../constants';
 function Experiences() {
     return (
         <div className="container" css={{backgroundColor: colors.peach}}>
-            {/* ccss stands for custom css and is applied manually to the custom component */}
-            <SectionTitle 
-                colors={{
-                    text: colors.peach,
-                    main: colors.orange,
-                    accent: colors.lighterBlue
-                }}
-            >
-                Experience
-            </SectionTitle>
+            <div css={{paddingTop: '50px'}}>
+                <SectionTitle 
+                    colors={{
+                        text: colors.peach,
+                        main: colors.orange,
+                        accent: colors.lighterBlue
+                    }}
+                >
+                    Experience
+                </SectionTitle>
+            </div>
             <div className='list-container'>
                 {expList.map((section) => 
                     <ExpSection key={section.title} sec={section}></ExpSection>

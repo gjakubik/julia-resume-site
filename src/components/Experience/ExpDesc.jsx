@@ -13,7 +13,7 @@ function ExpDesc(props) {
             <div css={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                alignItems: 'baseline',
+                alignItems: 'flex-end',
             }}>
                 <h3 css={{
                     borderBottom: `solid 5px ${colors.orange}`,
@@ -44,6 +44,7 @@ function ExpDesc(props) {
                 <ul css={{
                     width: '55%',
                     marginTop: '5px',
+                    listStyleType: 'square',
                 }}>
                     {props.item.descriptions.map((desc) => <li>{desc}</li>)}
                 </ul>
