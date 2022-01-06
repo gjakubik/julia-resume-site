@@ -40,7 +40,7 @@
   
   @keyframes slideout {
     0% {
-      transform: translate3d(4vh, -4vh, 0);
+      transform: translate3d(3vw, -4vh, 0);
     }
     100% {
       transform: translate3d(0, 0, 0);
@@ -52,18 +52,18 @@
     margin-top: 10vh;
     margin-inline: auto;
     font-size: 100px;
-    color: #fedcd2;
+    color: #a9c8cf;
   }
   
   .hero-subtitle-text {
     width: 90%;
     margin-inline: auto;
     font-size: 30px;
-    color: #fedcd2;
+    color: #a9c8cf;
   }
   
   .hero-block {
-    background-color: #fedcd2;
+    background-color: #a9c8cf;
     width: 50vw;
   }
   

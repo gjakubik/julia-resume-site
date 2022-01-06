@@ -29,7 +29,7 @@ function Hero() {
                 </CustomLink>
                 </h5>
             </div>
-            <div className='hero-title-accent' css={{backgroundColor: colors.lighterBlue}}></div>
+            <div className='hero-title-accent' css={{backgroundColor: colors.peach}}></div>
             <div className="hero-block"></div>
             <div className="hero-image"></div>
         </div>

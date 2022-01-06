@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import Hero from './components/Hero';
-import Experiences from './components/Experiences';
+import Experience from './components/Experience';
 import './index.css';
 
 function App() {
   return (
     <div className='body'>
       <Hero />
-      <Experiences />
+      <Experience />
     </div>
   );
 }
