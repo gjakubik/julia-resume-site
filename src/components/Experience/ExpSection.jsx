@@ -3,7 +3,6 @@ import './style.css'
 
 import SecHeader from './SecHeader';
 import ExpDesc from './ExpDesc';
-import { colors } from '../../constants';
 
 function ExpSection(props) {
 
