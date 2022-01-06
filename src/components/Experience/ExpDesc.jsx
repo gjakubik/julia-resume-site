@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import './style.css'
+import CustomLink from '../common/CustomLink';
 
 import { colors } from '../../constants';
 
@@ -16,16 +17,30 @@ function ExpDesc(props) {
                 alignItems: 'flex-end',
             }}>
                 <h3 css={{
+                    zIndex: 2,
                     borderBottom: `solid 5px ${colors.orange}`,
                     width: '30%',
-                    marginBottom: '0px',
+                    '&::after': {
+                        content: '""',
+                        zIndex: 1,
+                        display: 'block',
+                        borderBottom: `solid 5px ${colors.lighterBlue}`,
+                        marginTop: '5px',
+                        width: '100%',
+                        marginBottom: '-10px',
+                        marginLeft: '-50vw',
+                        transition: 'margin-left 500ms ease',
+                    },
+                    '&:hover::after': {
+                        transition: 'margin-left 500ms ease',
+                        marginLeft: '0px',
+                    }
                 }}>
-                    {props.item.business}
+                    <CustomLink primary={'black'} accent={colors.lighterBlue} href={props.item.link}>{props.item.business}</CustomLink>
                 </h3>
                 <h4 css={{
                     borderBottom: `solid 5px ${colors.lighterBlue}`,
                     width: '60%',
-                    marginBottom: '0px',
                 }}>
                     {props.item.title}
                 </h4>
@@ -37,7 +52,7 @@ function ExpDesc(props) {
             }}>
                 <h5 css={{
                     width: '30%',
-                    marginTop: '5px',
+                    marginTop: '0px',
                 }}>
                     <i>{props.item.date}</i>
                 </h5>
