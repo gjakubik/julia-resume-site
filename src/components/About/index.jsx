@@ -45,7 +45,7 @@ function About(props) {
                         color: colors.peach,
                         fontSize: '25px',
                     }}>
-                        Hi! I'm Julia, a motivated relationship-focused leader seeking a ProRep position to support students throughout the job recruitment process and promote the Gonzaga Career and Professional Development office. This is another sentence about the cool things I do, possibly a list of the most important. Here is another sentence about what a cool person I am, like listing a couple of my hobbies.
+                        I am a student at Gonzaga University who is interested in Human Resources and Marketing. I am a driven leader who strives to uplift others through community engagement and service. I am an effective communicator who works well both collaboratively and independently. Additionally, I am a dedicated worker and an engaged listener who cares deeply about women empowerment in the workplace and personal finance.
                     </p>
                 </div>
             </div>
