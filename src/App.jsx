@@ -8,11 +8,11 @@ import './index.css';
 
 function App() {
   return (
-    <div className='body'>
+    <>
       <Hero />
       <About />
       <Experience />
-    </div>
+    </>
   );
 }
 

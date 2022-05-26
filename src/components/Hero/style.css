@@ -1,82 +1,135 @@
 .hero-container {
-    display: flex;
+    display: grid;
     width: 100vw;
     height: 100vh;
   }
-  
-  .hero-title-block{
-    width: 50vw;
-    height: 80vh;
-    margin-top: 10vh;
-    margin-left: 10vw;
-    background-color: #ed855c;
-    border-radius: 2px;
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-  }
-  
-  .hero-title-accent {
-    width: 50vw;
-    height: 80vh;
-    margin-top: 14vh;
-    margin-left: 7vw;
-    background-color: #8eaebd;
-    position: absolute;
-    border-radius: 2px;
-    z-index: 1;
-    text-align: center;
-    animation: 2s ease-in 0s 1 slideout;
-  }
 
-  @media screen and (max-width: 1000px) {
-    .hero-title-block{
-      width: 500px;
-    }
-    .hero-title-accent{
-      width: 500px;
-    }
-  }
+.hero-container > div {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
   
-  @keyframes slideout {
-    0% {
-      transform: translate3d(3vw, -4vh, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
+.hero-overlay {
+  position: relative;
+    display: grid;
+    z-index: 1;
+}
+
+.hero-overlay > div {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.hero-title-block{
+  position: relative;
+  width: 50vw;
+  padding: 40px;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  background-color: #ed855c;
+  border-radius: 2px;
+  text-align: center;
+  transition: 
+      margin-top 1000ms ease,
+      width 1000ms ease,
+      padding 1000ms ease;
+}
+
+.hero-title-block::before {
+  content: "";
+  position: absolute;
+  top: 5vh;
+  left: -3vw;
+  width: 55vw;
+  height: 620px;
+  background-color: #fedcd2;
+  z-index: -1;
+  animation: 2s ease-in 0s 1 slideout;
+  transition:
+      height 1000ms ease,
+      width 1000ms ease;
+}
+
+/* .hero-title-accent {
+  width: 50vw;
+  height: 800px;
+  margin-top: calc(14vh + 40px);
+  margin-left: 7vw;
+  background-color: #fedcd2;
+  border-radius: 2px;
+  z-index: 1;
+  text-align: center;
+  animation: 2s ease-in 0s 1 slideout;
+} */
+
+.hero-background-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-title-block{
+    width: 500px;
   }
-  
+  .hero-title-block::before {
+    width: 555px;
+  }
+  .hero-title-accent{
+    width: 500px;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    transform: translate3d(3vw, -4vh, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-title-text {
+  width: 90%;
+  margin-inline: auto;
+  font-size: 100px;
+  color: #a9c8cf;
+}
+
+.hero-subtitle-text {
+  width: 90%;
+  margin-inline: auto;
+  font-size: 30px;
+  color: #a9c8cf;
+}
+
+.hero-block {
+  background-color: #a9c8cf;
+  width: 100vw;
+}
+
+@media (max-width: 750px) {
   .hero-title-text {
-    width: 90%;
-    margin-top: 10vh;
-    margin-inline: auto;
-    font-size: 100px;
-    color: #a9c8cf;
+    font-size: 50px;
   }
-  
   .hero-subtitle-text {
-    width: 90%;
-    margin-inline: auto;
-    font-size: 30px;
-    color: #a9c8cf;
+    font-size: 20px;
   }
-  
-  .hero-block {
-    background-color: #a9c8cf;
-    width: 50vw;
+  .hero-title-block {
+    padding: 10px;
+    width: 350px;
+    margin-top: 55vh;
+    transition: 
+      margin-top 1000ms ease,
+      width 1000ms ease,
+      padding 1000ms ease;
   }
-  
-  .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url("/src/images/juliaMain.jpg");
-  
-    /* Set a specific height */
-    width: 50vw;
-  
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  .hero-title-block::before {
+    width: 350px;
+    height: 300px;
+    transition:
+      height 1000ms ease,
+      width 1000ms ease;
   }
+}
