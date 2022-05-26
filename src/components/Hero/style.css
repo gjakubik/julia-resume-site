@@ -135,7 +135,7 @@
   }
   .hero-title-block::before {
     width: 350px;
-    height: 285px;
+    height: 290px;
     transition:
       height 1000ms ease,
       width 1000ms ease;
