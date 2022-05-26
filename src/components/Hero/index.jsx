@@ -37,7 +37,7 @@ function Hero() {
             </div>
             <div className="hero-background-container">
                 <div className="hero-block"></div>
-                <img src={juliaPic} alt='' />
+                <img src={juliaPic} className='bg-img' alt='' />
             </div>
         </div>
     );
