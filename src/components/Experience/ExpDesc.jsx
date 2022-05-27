@@ -7,60 +7,33 @@ import { colors } from '../../constants';
 function ExpDesc(props) {
 
     return (
-        <div css={{
-            width: '90%',
-            marginInline: 'auto',
-        }}>
-            <div css={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-end',
-            }}>
-                <h3 css={{
-                    zIndex: 2,
-                    borderBottom: `solid 5px ${colors.orange}`,
-                    width: '30%',
-                    '&::after': {
-                        content: '""',
-                        zIndex: 1,
-                        display: 'block',
-                        borderBottom: `solid 5px ${colors.lighterBlue}`,
-                        marginTop: '5px',
-                        width: '100%',
-                        marginBottom: '-10px',
-                        marginLeft: '-50vw',
-                        transition: 'margin-left 500ms ease',
-                    },
-                    '&:hover::after': {
-                        transition: 'margin-left 500ms ease',
-                        marginLeft: '0px',
-                    }
-                }}>
+        <div className="item-container">
+            <div className="item-header-container" >
+                <h3 
+                    className="item-header"
+                    css={{
+                        borderBottom: `solid 5px ${colors.orange}`,
+                        '&::after': {
+                            borderBottom: `solid 5px ${colors.lighterBlue}`,
+                        }
+                    }}
+                >
                     <CustomLink primary={'black'} accent={colors.lighterBlue} href={props.item.link}>{props.item.business}</CustomLink>
                 </h3>
-                <h4 css={{
-                    borderBottom: `solid 5px ${colors.lighterBlue}`,
-                    width: '60%',
-                }}>
+                <h4 
+                    className="item-position"
+                    css={{
+                        borderBottom: `solid 5px ${colors.lighterBlue}`,
+                    }}
+                >
                     {props.item.title}
                 </h4>
             </div>
-            <div css={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-            }}>
-                <h5 css={{
-                    width: '30%',
-                    marginTop: '0px',
-                }}>
+            <div className="item-description-container">
+                <h5 className="item-description-date" >
                     <i>{props.item.date}</i>
                 </h5>
-                <ul css={{
-                    width: '55%',
-                    marginTop: '5px',
-                    listStyleType: 'square',
-                }}>
+                <ul className="item-description-list">
                     {props.item.descriptions.map((desc) => <li>{desc}</li>)}
                 </ul>
             </div>
