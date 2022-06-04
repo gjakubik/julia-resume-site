@@ -76,8 +76,9 @@
 
 .item-description-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
+    margin-top: -15px;
 }
 
 .item-description-date {
@@ -87,8 +88,14 @@
 
 .item-description-list {
     width: 55%;
-    margin-top: 5px;
-    list-style-type: square;
+    margin-top: 0px;
+    list-style: none;
+    margin-left: 25px;
+}
+
+.item-list-item {
+    margin-bottom: 20px;
+    margin-left: 0px;
 }
 
 @media (max-width: 750px) {
@@ -109,6 +116,7 @@
     .item-description-container {
         flex-direction: column;
         align-items: flex-start;
+        margin-top: 0px;
     }
     .item-description-date {
         width: 100%;
@@ -117,6 +125,6 @@
     .item-description-list {
         width: 100%;
         margin-top: 0px;
-        margin-left: -20px;
+        margin-left: -40px;
     }
 }

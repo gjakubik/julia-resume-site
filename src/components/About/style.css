@@ -37,6 +37,10 @@
 }
 
 @media (max-width: 750px) {
+    .content-container {
+        width: 90%;
+        margin-left: 0px;
+    }
     .headshot-img-lg {
         display: none;
     }

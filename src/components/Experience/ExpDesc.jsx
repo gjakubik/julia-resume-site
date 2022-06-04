@@ -34,7 +34,7 @@ function ExpDesc(props) {
                     <i>{props.item.date}</i>
                 </h5>
                 <ul className="item-description-list">
-                    {props.item.descriptions.map((desc) => <li>{desc}</li>)}
+                    {props.item.descriptions.map((desc) => <li className="item-list-item">{desc}</li>)}
                 </ul>
             </div>
         </div>
