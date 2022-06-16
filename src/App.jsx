@@ -9,12 +9,12 @@ import './index.css';
 
 function App() {
   return (
-    <>
+    <div css={{width: '100vw', overflowX: 'hidden'}}>
       <Hero />
       <About />
       <Experience />
       <Contact />
-    </>
+    </div>
   );
 }
 
