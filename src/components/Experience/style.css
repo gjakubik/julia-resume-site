@@ -90,7 +90,13 @@
     width: 55%;
     margin-top: 0px;
     list-style: none;
-    margin-left: 25px;
+    margin-left: 3vw;
+}
+
+@media (min-width: 1230px) {
+    .item-description-list {
+        margin-left: 4vw;
+    }
 }
 
 .item-list-item {
