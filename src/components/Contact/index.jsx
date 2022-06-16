@@ -21,7 +21,7 @@ function Contact(props) {
             </SectionTitle>
             <div className="contact-info-container">
                 <ContactButton
-                    link="https://www.linkedin.com/in/jakub-jakubik-a8a8b817b/"
+                    link="https://www.linkedin.com/in/julia-jakubik/"
                     image={LinkedInIcon}
                 />
                 <ContactButton
