@@ -8,6 +8,7 @@ function CustomLink(props) {
             href={props.href} 
             className="zag-link"
             css={{color: props.primary, '&:hover': {color: props.accent}}} 
+            target="blank"
         >
             {props.children}
         </a>
